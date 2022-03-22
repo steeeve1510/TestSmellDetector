@@ -74,17 +74,6 @@ public class IgnoredTest extends AbstractSmell {
                     return;
                 }
             }
-
-            //JUnit 3
-            //check if test method is not public
-            if (n.getNameAsString().toLowerCase().startsWith("test")) {
-                if (!n.getModifiers().contains(Modifier.PUBLIC)) {
-                    testMethod = new TestMethod(n.getNameAsString());
-                    testMethod.setSmell(true);
-                    smellyElementsSet.add(testMethod);
-                    return;
-                }
-            }
         }
 
     }
